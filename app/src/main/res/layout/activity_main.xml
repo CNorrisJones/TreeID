@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.e.test.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <Button
+        android:id="@+id/id_from_gallery"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginTop="9dp"
+        android:capitalize="none"
+        android:onClick="getImageFromGallery"
+        android:text="@string/nav_gallery"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_history"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/id_from_camera"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:onClick="dispatchTakePictureIntent"
+        android:text="@string/nav_camera"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/id_from_gallery"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintLeft_toLeftOf="@+id/id_from_gallery"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginEnd="23dp"
+        android:layout_marginStart="16dp"
+        android:adjustViewBounds="true"
+        android:clickable="true"
+        android:contextClickable="false"
+        android:cropToPadding="true"
+        android:onClick="submitImage"
+        android:padding="0dp"
+
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/cedar_rotated"
+        app:layout_constraintRight_toLeftOf="@+id/id_history"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/id_history"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/predictionTextView" />
+
+    <Button
+        android:id="@+id/id_history"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="27dp"
+        android:onClick="viewIDHistory"
+        android:text="@string/nav_IDHistory"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="166dp" />
+
+    <TextView
+        android:id="@+id/predictionTextView"
+        android:layout_width="110dp"
+        android:layout_height="206dp"
+        android:layout_marginEnd="42dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

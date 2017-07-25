@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TreeID</string>
+    <string name="nav_IDHistory">View ID History</string>
+    <string name="nav_camera">Get image from camera</string>
+    <string name="nav_gallery">Get image from gallery</string>
+    <!--from clarifai android starter app -->
+    <string name="clarifai_api_key">af3e3aecbd3244feaa035019462a5f7d</string>
+
+
+</resources>
